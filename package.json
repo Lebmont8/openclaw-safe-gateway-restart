@@ -1,0 +1,16 @@
+{
+  "name": "openclaw-safe-gateway-restart",
+  "version": "0.1.0",
+  "description": "Request and verify an OpenClaw safe gateway restart without relying on PID rotation alone.",
+  "type": "module",
+  "license": "MIT",
+  "author": "Lebmont8",
+  "repository": { "type": "git", "url": "git+https://github.com/Lebmont8/openclaw-safe-gateway-restart.git" },
+  "bin": { "openclaw-safe-restart": "scripts/safe-restart.sh" },
+  "files": ["scripts/", "lib/", "README.md", "SECURITY.md", "LICENSE"],
+  "scripts": {
+    "check": "bash -n scripts/safe-restart.sh && node --check lib/reload-marker.mjs",
+    "test": "node --test test/*.test.mjs",
+    "verify": "npm run check && npm test"
+  }
+}
