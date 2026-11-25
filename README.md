@@ -48,3 +48,7 @@ fresh health AND (new PID OR newer runtime generation)
 ```
 
 MIT licensed.
+
+## Verification scope
+
+GitHub Actions runs the existing network-free checks on Node.js 22 and 24. These tests do not log into a provider, restart a Gateway, or prove compatibility with every OpenClaw release. Verify your installed runtime API before deployment; model identifiers in configuration examples must exist in your own account.
